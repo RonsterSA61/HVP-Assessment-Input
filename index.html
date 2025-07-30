@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Profile Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen" class="screen">
+        
+        <img src="logo.jpg" alt="BIAMIC Coaching & Consulting Logo" class="logo-img">
+
+        <h1>Welcome to the Value Profile Assessment</h1>
+        <p>Please enter your details to begin.</p>
+        <form id="user-form">
+            <input type="text" id="user-name" placeholder="Your Name" required>
+            <input type="email" id="user-email" placeholder="Your Email Address" required>
+            <input type="tel" id="user-phone" placeholder="Your Phone Number">
+            <button type="submit">Begin Assessment</button>
+        </form>
+        <div class="disclaimer">
+            <p>By clicking "Begin Assessment", you agree to our <a href="#" id="disclaimer-link">terms and conditions</a>.</p>
+        </div>
+    </div>
+
+    <div id="part1-screen" class="screen" style="display: none;">
+        <h2>Part 1: World View</h2>
+        <p>Please rank the following phrases from best to worst by dragging and dropping them into a new order. Place the phrase you consider 'best' or most positive at the top, and the 'worst' or most negative at the bottom.</p>
+	<p>Base your ranking on the goodness or badness of each phrase, not its importance. There's no time limit, but most people finish in about 15 - 20 minutes, so it's best to go with your initial feeling. You may begin.</p>
+        <div id="part1-phrases" class="phrase-list">
+            </div>
+        <button id="complete-part1-btn">Part 1 Complete</button>
+    </div>
+
+    <div id="part2-screen" class="screen" style="display: none;">
+        <h2>Part 2: Self View</h2>
+        <p>Now, please rank the following phrases based on how they apply to you, from 'most like me' at the top to 'least like me' at the bottom. Drag and drop the items to reorder them.</p>
+	<p>Other considerations are on Part 1 of the assessment</p>
+        <div id="part2-phrases" class="phrase-list">
+            </div>
+        <button id="back-to-part1-btn">Back to Part 1</button>
+        <button id="complete-all-btn">Complete All & Submit</button>
+    </div>
+
+    <div id="completion-screen" class="screen" style="display: none;">
+        <h2>Thank You!</h2>
+        <p>Your assessment has been submitted. You will receive a confirmation email shortly.</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
