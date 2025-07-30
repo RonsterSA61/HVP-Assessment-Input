@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         assessmentData.part2Ranking = sortablePart2.toArray();
         
         try {
-            const response = await fetch('/submit-assessment', {
+            const response = await fetch('/.netlify/functions/submit-assessment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
